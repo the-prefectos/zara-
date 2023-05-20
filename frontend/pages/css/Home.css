@@ -1,0 +1,154 @@
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.logo {
+  color: rgb(18, 17, 17);
+  font-weight: bold;
+  position: relative;
+  left: 100px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: black;
+  padding: 5px 10px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+.categories-menu {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1;
+  color: rgb(19, 18, 18);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.categories-menu.active {
+  transform: translateX(0);
+}
+
+.categories-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.categories-menu.active .categories-list {
+  transform: translateX(0);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  color: rgb(32, 29, 29);
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.categories-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-list li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+  padding: 0px;
+  width: 150px;
+  font-size: 16px;
+  color: #0c0b0b;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+input[type="text"]::placeholder {
+  color: #0c0b0b;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.category-choices {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  position: relative;
+  bottom: -80px;
+}
+
+.category-choices li {
+  padding: 5px 0;
+}
