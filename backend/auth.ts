@@ -7,6 +7,7 @@ const { SECRET_KEY } = process.env;
 interface DecodedToken {
   user: {
     _id: string;
+    is_admin: boolean;
   };
 }
 
@@ -50,11 +51,25 @@ const authenticate = async (
     });
   }
 
-  console.log(decoded);
-
   req.user = decoded.user._id;
+  req.isAdmin = decoded.user.is_admin;
 
   return next();
 };
 
-export default authenticate;
+const authorizeAdmin = async (
+  req: any,
+  res: any,
+  next: any
+): Promise<any> => {
+  if (!req.isAdmin) {
+    return res.status(403).send({
+      message: "Unauthorized access",
+      status: false,
+    });
+  }
+
+  return next();
+};
+
+export { authenticate, authorizeAdmin };
