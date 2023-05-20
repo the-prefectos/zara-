@@ -15,7 +15,7 @@ const PORT = 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Middleware
+
 app.use(bodyParser.json());
 app.post("/register", register);
 app.post("/login", login);
@@ -24,7 +24,6 @@ app.use("/men", menRoutes);
 app.use("/women", womenRoutes);
 app.use("/kids", kidsRoutes);
 
-// Connect to MongoDB
 mongoose
   .connect("mongodb+srv://messud:azerty123@seniordata.sg77wxf.mongodb.net/?retryWrites=true&w=majority")
   .then(() => {
@@ -34,14 +33,12 @@ mongoose
     console.error("Failed to connect to MongoDB", err);
   });
 
-// Routes
+
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello, World!");
 });
 
-// Define your routes for users, products, men, women here
 
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
