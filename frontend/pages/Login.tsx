@@ -21,9 +21,9 @@ const Login = () => {
            console.log(response.data.user.fname);
       localStorage.setItem('userName', response.data.user.fname);
       localStorage.setItem( 'isAdmin' ,response.data.user.is_admin);
-      console.log(localStorage.getItem('isAdmin'));
-      
-      router.push('/Home');
+      localStorage.setItem( 'token' ,response.data.token);
+      router.push('/Home' );
+
     } catch (error: any) {
       console.error('Login failed:', error.message);
     }

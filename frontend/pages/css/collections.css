@@ -1,0 +1,45 @@
+h1{
+    position: relative;
+    bottom: -100px;
+    font-weight: 280;
+    left: 100px;
+}
+
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    position: relative;
+    bottom: -120px;
+  }
+  
+  .collection-box {
+    border: 5px solid #ccc;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .collection-box img {
+    width: 100%;
+    max-height: 300px;
+    object-fit:fill;
+    margin-bottom: 10px;
+  }
+  
+  .collection-box h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .collection-box p {
+    margin-bottom: 10px;
+  }
+
+  #add{
+    position: relative;
+    left: 100px;
+    bottom: -200px ;
+    cursor: pointer;
+  }
+  
