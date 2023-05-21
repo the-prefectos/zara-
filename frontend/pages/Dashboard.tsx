@@ -24,6 +24,7 @@ const Dashboard = () => {
           <a>
             <button id="k">KIDS</button>
           </a>
+          
         </Link>
         <Link legacyBehavior href="/clothes">
           <a>

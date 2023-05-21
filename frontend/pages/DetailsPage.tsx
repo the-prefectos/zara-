@@ -6,6 +6,7 @@ import './css/Details.css';
 import './css/Home.css';
 import Link from 'next/link';
 
+
 interface Item {
   _id: string;
   name: string;
