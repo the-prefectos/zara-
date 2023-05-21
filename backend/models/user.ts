@@ -3,9 +3,10 @@ import bcrypt from "bcrypt";
 
 export interface UserDocument extends Document {
   fname: string;
-  lname : string;
+  lname: string;
   email: string;
   password: string;
+  is_admin: boolean;
   checkPassword(password: string): boolean;
 }
 
@@ -14,7 +15,8 @@ const userSchema = new mongoose.Schema<UserDocument>(
     fname: { type: String, required: true },
     lname: { type: String, required: true },
     email: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    is_admin: { type: Boolean },
   },
   {
     versionKey: false,

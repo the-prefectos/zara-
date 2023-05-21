@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import axios from 'axios';
 import './css/login.css';
 
 const Login = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({ email: '', password: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,16 +14,23 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     try {
       const response = await axios.post('http://localhost:5000/login', formData);
-      // Handle successful login response, e.g., store token in localStorage or redirect to another page
       console.log('Login successful:', response.data);
-    } catch (error) {
-      // Handle login error, e.g., display error message
+           console.log(response.data.user.fname);
+      localStorage.setItem('userName', response.data.user.fname);
+      localStorage.setItem( 'isAdmin' ,response.data.user.is_admin);
+      console.log(localStorage.getItem('isAdmin'));
+      
+      router.push('/Home');
+    } catch (error: any) {
       console.error('Login failed:', error.message);
     }
-  };
+  }
+
+ 
+  
 
   return (
     <>
@@ -58,7 +67,7 @@ const Login = () => {
         <div className="right-login-form">
           <h5>NEED AN ACCOUNT ?</h5>
 
-          <Link legacyBehavior href="/reg">
+          <Link legacyBehavior href="/register">
             <a className="create-btn">REGISTER</a>
           </Link>
         </div>

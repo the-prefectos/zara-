@@ -1,0 +1,190 @@
+.container {
+    width: 100%;
+    display: flex;
+    margin: 4%;
+    }
+    
+    input[type='text'] {
+    position: relative;
+    left: 100px;
+    width: 280%;
+    padding: 5px 12px 0 20px;
+    margin: 18px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 75%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    }
+    input[type='pass'] {
+        position:relative;
+        left: 650px;
+        outline: none;
+    border: none;
+    border-bottom: 1px solid ;
+    bottom: 40px;
+    font-size: 75%;
+    width: 220% ;
+    }
+    input[type='na'] {
+        position:relative;
+        left: 650px;
+        outline: none;
+    border: none;
+    border-bottom: 1px solid ;
+    bottom: -30px;
+    font-size: 75%;
+    width: 220% ;
+    }
+    
+    .checkbox {
+    position: relative;
+    bottom: -180px;
+    left: -50px;
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    }
+    
+    .checkbox2 {
+    position: relative;
+    bottom: -230px;
+    left: -524px;
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    }
+    
+    .checkbox__label {
+    position: relative;
+    bottom: 22px;
+    width: 100%;
+    margin-left: 3%;
+    font-size: 100%;
+    color: gray;
+    font-size: 70%;
+    }
+    
+    .signupbtn {
+    position: relative;
+    left: -999px;
+    bottom: -150px;
+    width: 85%;
+    background-color: rgb(253, 251, 251);
+    color: rgb(14, 12, 12);
+    margin-top: 11%;
+    border: 1px solid black;
+    cursor: pointer;
+    }
+    
+    .signupbtn:hover {
+    background-color: rgb(230, 230, 230);
+    color: rgb(14, 12, 12);
+    }
+    
+    .Left-form {
+    width: 30%;
+    }
+    
+    .right-form {
+    width: 40%;
+    }
+    
+    .dot {
+    color: white;
+    }
+    
+    .changeform-btn {
+    display: flex;
+    width: 14%;
+    justify-content: space-between;
+    margin: 4%;
+    font-size: 80%;
+    font-weight: bold;
+    }
+    
+    .headingform {
+    margin: 4%;
+    font-size: 98%;
+    color: black;
+    }
+    
+    .signup-footer {
+    display: flex;
+    position: relative;
+    bottom: 200px;
+    width: 40%;
+    justify-content: space-between;
+    margin: 8%;
+    }
+    
+    .header-heading1 {
+    font-size: 80%;
+    position: relative;
+    bottom: -200px;
+    left: 150px;
+    }
+    .header-heading2{
+        font-size: 80%;
+        position: relative;
+        bottom: -25px;
+        left: 350px;
+        }
+        .header-heading3 {
+            font-size: 80%;
+            position: relative;
+            bottom: 135px;
+            left: 550px;
+            }
+
+            .list {
+                text-decoration: none;
+                color: rgb(20, 19, 19);
+                font-size: 68%;
+                display: block;
+                margin-top: 5px;
+                position: relative;
+                bottom: -200px;
+                left: 150px;
+                
+              }
+              .list2 {
+                text-decoration: none;
+                color: rgb(14, 12, 12);
+                font-size: 68%;
+                display: block;
+                margin-top: 5px;
+                position: relative;
+        bottom: -25px;
+        left: 350px;
+              }
+              .list3 {
+                text-decoration: none;
+                color: rgb(26, 22, 22);
+                font-size: 68%;
+                display: block;
+                margin-top: 5px;
+                position: relative;
+                bottom: 135px;
+                left: 550px;
+              }
+            h2{
+                position: relative;
+                left: 100px;
+            }
+            h1{
+                position: relative;
+                left: 200px;
+                font-size: 5rem;
+            }
+
+.reg1 {
+    position: relative;
+    left: 100px;
+}
+.reg2 {
+    position: relative;
+    left: 100px;
+}
