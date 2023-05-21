@@ -74,9 +74,9 @@ const HomePage: React.FC = () => {
             {isDropdownOpen ? '.' : '.'} {userName}
           </button>
           {isDropdownOpen && (
-            <ul className="dropdown-menu">
+            <a className="dropdown-menu">
               <a id='out' onClick={handleLogout}>Logout</a>
-            </ul>
+            </a>
           )}
         </div>
       ) : (
@@ -111,34 +111,53 @@ const HomePage: React.FC = () => {
           <ul className="category-choices">
             {selectedCategory === 'MEN' && (
               <>
-                <li>Choice 1</li>
-                <li>Choice 2</li>
-                <li>Choice 3</li>
-                <li>Choice 4</li>
+                <li>COLLECTIONS</li>
+                <li>CROCHET</li>
+                <li>BASICS</li>
+                <li>COSTUMES</li>
+                  <li>SHIRTS</li>
+             <li>T-SHIRTS</li>
+            <li>JACKETS | OVERSHIRTS</li>
+                 <li>PANTS</li>
+                 <li>JEANS</li>
+              <li>SHORTS</li>
+               <li>SWEATS | HOODIES</li>
               </>
             )}
             {selectedCategory === 'WOMEN' && (
               <>
-                <li>Choice 5</li>
-                <li>Choice 6</li>
-                <li>Choice 7</li>
-                <li>Choice 8</li>
+              <li>COLLECTIONS</li>
+                <li>BLAZERS</li>
+<li>JACKETS | TRENCH</li>
+<li>WITHOUT SLEEVES</li>
+<li>DRESSES | COMBINATIONS</li>
+<li>SHIRTS | GOWNS</li>
+<li>T-SHIRTS | SWEATS</li>
               </>
             )}
             {selectedCategory === 'KIDS' && (
               <>
-                <li>Choice 9</li>
-                <li>Choice 10</li>
-                <li>Choice 11</li>
-                <li>Choice 12</li>
+              <li>COLLECTIONS</li>
+                <li>COLONIES DE VACANCES NEW</li>
+<li>TRUE NEUTRALS NEW</li>
+<li>GIRL | 6-14 years old</li>
+<li>BOY | 6-14 years old</li>
+<li>BABY GIRL | 9 months - 6 years</li>
+<li>BABY BOY | 9 months - 6 years</li>
+<li>ACCESSORIES | SHOES</li>
               </>
             )}
             {selectedCategory === 'BEAUTY' && (
               <>
-                <li>Choice 13</li>
-                <li>Choice 14</li>
-                <li>Choice 15</li>
-                <li>Choice 16</li>
+                  <li>View All</li>
+        <li>TUTORIALS</li>
+        <li>Lips</li>
+        <li>Eyes</li>
+        <li>Visage</li>
+        <li>NAIL POLISH</li>
+        <li>PAINT BRUSHES</li>
+        <li>SHADE FINDER</li>
+        <li>RECHARGES</li>
               </>
             )}
           </ul>
