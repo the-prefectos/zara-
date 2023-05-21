@@ -34,7 +34,7 @@ const Add: React.FC = () => {
       <h1>Add Product</h1>
       <form onSubmit={handleFormSubmit}>
         <label>
-          Name:
+           Name:
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
         </label>
         <label>
