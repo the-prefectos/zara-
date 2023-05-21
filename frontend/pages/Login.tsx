@@ -20,9 +20,7 @@ const Login = () => {
       console.log('Login successful:', response.data);
            console.log(response.data.user.fname);
       localStorage.setItem('userName', response.data.user.fname);
-      localStorage.setItem( 'isAdmin' ,response.data.user.is_admin);
-      console.log(localStorage.getItem('isAdmin'));
-      
+      localStorage.setItem('admin', response.data.user.is_admin);
       router.push('/Home');
     } catch (error: any) {
       console.error('Login failed:', error.message);

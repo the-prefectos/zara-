@@ -157,20 +157,11 @@ input[type="text"]::placeholder {
   position: fixed;
   font-size: 1rem;
   left: 1420px;
-  bottom: 150px;
-  font-weight: lighter;
   font-family: "Helvetica Neue Thin", Arial, sans-serif;
   cursor: pointer;
 }
 
 #un {
   cursor: pointer;
-}
-
-#dash {
-  position: relative;
-  left: 500px;
-  cursor: pointer;
-
 }
 

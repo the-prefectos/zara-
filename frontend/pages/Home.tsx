@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
   const router = useRouter();
   const [userName, setUserName] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -18,6 +18,7 @@ const HomePage: React.FC = () => {
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
   };
+
   const handleLoginClick = () => {
     router.push('/Login');
   };
@@ -26,11 +27,6 @@ const HomePage: React.FC = () => {
     const storedUserName = localStorage.getItem('userName');
     if (storedUserName) {
       setUserName(storedUserName);
-     console.log("my log" ,localStorage.getItem('isAdmin'))
-    }
-    const checkAdmin = localStorage.getItem('isAdmin');
-    if (checkAdmin) {
-      setIsAdmin(checkAdmin === 'true');
     }
   }, []);
 
@@ -64,7 +60,6 @@ const HomePage: React.FC = () => {
     <div className="container">
       <nav className="navbar">
         <div className="logo">ZARA</div>
-        { isAdmin  && <button className="button" id='dash'>DASHBOARD</button>}
         <div className="navbar-right">
   <input type="text" placeholder="Search" />
   <button className="button">Bucket</button>
@@ -74,9 +69,9 @@ const HomePage: React.FC = () => {
             {isDropdownOpen ? '.' : '.'} {userName}
           </button>
           {isDropdownOpen && (
-            <a className="dropdown-menu">
+            <ul className="dropdown-menu">
               <a id='out' onClick={handleLogout}>Logout</a>
-            </a>
+            </ul>
           )}
         </div>
       ) : (
@@ -111,53 +106,34 @@ const HomePage: React.FC = () => {
           <ul className="category-choices">
             {selectedCategory === 'MEN' && (
               <>
-                <li>COLLECTIONS</li>
-                <li>CROCHET</li>
-                <li>BASICS</li>
-                <li>COSTUMES</li>
-                  <li>SHIRTS</li>
-             <li>T-SHIRTS</li>
-            <li>JACKETS | OVERSHIRTS</li>
-                 <li>PANTS</li>
-                 <li>JEANS</li>
-              <li>SHORTS</li>
-               <li>SWEATS | HOODIES</li>
+                <li>Choice 1</li>
+                <li>Choice 2</li>
+                <li>Choice 3</li>
+                <li>Choice 4</li>
               </>
             )}
             {selectedCategory === 'WOMEN' && (
               <>
-              <li>COLLECTIONS</li>
-                <li>BLAZERS</li>
-<li>JACKETS | TRENCH</li>
-<li>WITHOUT SLEEVES</li>
-<li>DRESSES | COMBINATIONS</li>
-<li>SHIRTS | GOWNS</li>
-<li>T-SHIRTS | SWEATS</li>
+                <li>Choice 5</li>
+                <li>Choice 6</li>
+                <li>Choice 7</li>
+                <li>Choice 8</li>
               </>
             )}
             {selectedCategory === 'KIDS' && (
               <>
-              <li>COLLECTIONS</li>
-                <li>COLONIES DE VACANCES NEW</li>
-<li>TRUE NEUTRALS NEW</li>
-<li>GIRL | 6-14 years old</li>
-<li>BOY | 6-14 years old</li>
-<li>BABY GIRL | 9 months - 6 years</li>
-<li>BABY BOY | 9 months - 6 years</li>
-<li>ACCESSORIES | SHOES</li>
+                <li>Choice 9</li>
+                <li>Choice 10</li>
+                <li>Choice 11</li>
+                <li>Choice 12</li>
               </>
             )}
             {selectedCategory === 'BEAUTY' && (
               <>
-                  <li>View All</li>
-        <li>TUTORIALS</li>
-        <li>Lips</li>
-        <li>Eyes</li>
-        <li>Visage</li>
-        <li>NAIL POLISH</li>
-        <li>PAINT BRUSHES</li>
-        <li>SHADE FINDER</li>
-        <li>RECHARGES</li>
+                <li>Choice 13</li>
+                <li>Choice 14</li>
+                <li>Choice 15</li>
+                <li>Choice 16</li>
               </>
             )}
           </ul>
